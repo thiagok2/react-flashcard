@@ -1,15 +1,25 @@
 export default function Header({ children, size }) {
-  let fontSize = 'text-xl';
-
-  if (size === 'large') {
-    fontSize = 'text-2xl';
-  }
 
   return (
     <header>
-      <div className="bg-blue-200 mx-auto p-4">
-        <h1 className={`text-center font-semibold ${fontSize}`}>{children}</h1>
+      <div style={styles.container}>
+        <h1 style={styles.h1}>{children}</h1>
       </div>
     </header>
   );
+}
+
+const styles = {
+  container: {
+    backgroundColor: 'rgba(191, 219, 254)',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    padding: 20
+  },
+  h1: {
+    textAlign: 'center',
+    fontWeight: 600,
+    fontSize: 20,
+    lineHeight: 2
+  }
 }

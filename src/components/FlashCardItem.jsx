@@ -38,19 +38,19 @@ export default function FlashCardItem({
       <div style={{marginTop: 4, display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'end', padding: 10, margin: 20}}>
         <EditIcon
           onClick={() => handleEditIconClick(true)}
-          className="cursor-pointer"
+          style={{cursor: 'pointer'}}
           size={24}
         />
 
         <DeleteIcon
           onClick={handleDeleteIconClick}
-          className="cursor-pointer"
+          style={{cursor: 'pointer'}}
           size={24}
         />
 
         <ViewIcon
          onClick={() => handleEditIconClick(false)}
-         className="cursor-pointer"
+         style={{cursor: 'pointer'}}
          size={24}>
 
         </ViewIcon>

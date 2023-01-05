@@ -58,7 +58,7 @@ export default function FlashCardForm({
     clearFields();
   }
 
-  const backgroundName = createMode ? 'bg-green-100' : 'bg-yellow-100';
+  const backgroundName = createMode ? 'green' : 'yellow';
 
   return (
     <form

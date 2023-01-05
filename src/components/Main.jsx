@@ -1,3 +1,14 @@
 export default function Main({ children }) {
-  return <main className="container mx-auto p-4">{children}</main>;
+  const styles = {
+    main: {
+      width: '100%',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      padding: 10
+    }
+  }
+
+  
+  return <main style={styles.main}>{children}</main>;
 }
+

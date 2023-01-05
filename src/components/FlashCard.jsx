@@ -14,14 +14,14 @@ export default function FlashCard({
       onSelected(id);
   }
 
-  const fontSizeClassName = showFlashCardTitle ? 'text-xl' : 'text-sm';
-
+  const fontStyle = {
+      fontSize: showFlashCardTitle ? 24 : 16,
+      lineHeight: showFlashCardTitle ? 2 : 1.25 
+  }
+  
   return (
     <div
-      className={`shadow-lg p-4 m-2 w-80 h-48 cursor-pointer
-                  flex flex-row items-center justify-center 
-                  font-semibold ${fontSizeClassName}`}
-      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+      style={{...styles.container, ...fontStyle}}
       onClick={handleCardClick}
     >
       {showFlashCardTitle ? title : description}
@@ -29,4 +29,22 @@ export default function FlashCard({
       <button onClick={() => {}}></button>
     </div>
   );
+}
+
+const styles = {
+  container: {
+    padding: 16,
+    margin: 8,
+    width: 320,
+    height: 192,
+    cursor: 'pointer',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontWeight: 600,
+    lineHeight: 28,
+    boxShadow: '1px 3px 1px gray',
+    fontFamily: "'JetBrains Mono', monospace"
+  }
 }

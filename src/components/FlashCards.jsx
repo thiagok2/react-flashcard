@@ -1,6 +1,16 @@
 export default function FlashCards({ children: flashcards }) {
+  const styleContainer = {
+    border: '1px solid',
+    padding: 8,
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexWrap: 'wrap'
+
+  }
   return (
-    <div className="border p-2 flex flex-row items-center justify-center flex-wrap">
+    <div style={styleContainer}>
       {flashcards}
     </div>
   );

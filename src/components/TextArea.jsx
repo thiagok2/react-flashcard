@@ -18,21 +18,21 @@ export default function TextInput({
   const currentCharacterCount = textAreaValue.length;
 
   return (
-    <div className="flex flex-col my-4">
-      <label className="text-sm mb-1" htmlFor={id}>
+    <div style={{display:'flex', flexDirection:'column', marginTop:5, marginBlock: 5}}>
+      <label style={{fontSize: 0.875,lineHeight: 1.25}} htmlFor={id}>
         {labelDescription}
       </label>
 
       <textarea
         id={id}
-        className="border p-1"
+        style={{border: '1px solid', borderColor: 'gray', padding: 5}}
         maxLength={maxLength}
         rows={rows}
         value={textAreaValue}
         onChange={handleInputChange}
       />
 
-      <div className="text-right mr-1">
+      <div style={{display: 'flex', flexDirection: 'row', justifyContent:'end', marginRight: 5}}>
         <span>
           {currentCharacterCount} / {maxLength}
         </span>

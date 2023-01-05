@@ -15,15 +15,15 @@ export default function TextInput({
   }
 
   return (
-    <div className="flex flex-col my-4">
-      <label className="text-sm mb-1" htmlFor={id}>
+    <div style={{display:'flex', flexDirection:'column', marginTop:5, marginBlock: 5}}>
+      <label style={{fontSize: 0.875,lineHeight: 1.25}} htmlFor={id}>
         {labelDescription}
       </label>
 
       <input
         autoFocus={autoFocus}
         id={id}
-        className="border p-1"
+        style={{border: '1px solid', borderColor: 'gray', padding: 5}}
         type="text"
         value={inputValue}
         onChange={handleInputChange}
